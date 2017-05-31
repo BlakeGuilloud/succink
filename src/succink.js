@@ -1,6 +1,6 @@
 'use strict';
 
-const AWS = require('aws-sdk');
+const S3 = require('aws-sdk/clients/s3');
 const url = require('url');
 
 const S3_Bucket = process.env['S3_BUCKET'];
@@ -15,7 +15,7 @@ const generateShortId = () => {
 };
 
 exports.handler = (event, context, callback) => {
-  const s3 = new AWS.S3({ region: S3_Region });
+  const s3 = new S3({ region: S3_Region });
   const long_url = event.long_url;
   const base_url = Base_URL;
 
