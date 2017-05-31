@@ -7,9 +7,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, './dist'),
-    filename: '[name].min.js',
-    libraryTarget: 'umd',
-    library: 'succink',
+    filename: '[name].min.js'
   },
   module: {
     loaders: [
@@ -19,6 +17,13 @@ module.exports = {
   resolve: {
     extensions: ['.js'],
   },
+  node: {
+    console: false,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
+  target: 'node',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {

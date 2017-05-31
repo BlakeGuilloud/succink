@@ -1,4 +1,4 @@
-const request = require("request-promise");
+const rp = require("request-promise");
 
 function succink(long_url) {
   const options = {
@@ -9,7 +9,7 @@ function succink(long_url) {
     json: true
   };
 
-  return request(options);
+  return rp(options);
 }
 
 module.exports = succink;
