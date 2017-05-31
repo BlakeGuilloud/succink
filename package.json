@@ -2,7 +2,7 @@
   "name": "succink",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "rm -Rf lib && babel src -d lib --copy-files"
   },
@@ -20,6 +20,6 @@
     "request-promise": "^4.2.1"
   },
   "files": [
-    "dist/**"
+    "lib/**"
   ]
 }
