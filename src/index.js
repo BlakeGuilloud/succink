@@ -1,9 +1,11 @@
-const rp = require("request-promise");
+const rp = require('request-promise');
 
-function succink(long_url) {
+const generateShortLinkPostUrl = 'https://qpb2m4eon4.execute-api.us-west-2.amazonaws.com/prod/';
+
+function generateShortLink(long_url) {
   const options = {
     method: 'POST',
-    url: 'https://p71ulb59k5.execute-api.us-west-2.amazonaws.com/prod/',
+    url: generateShortLinkPostUrl,
     headers: { 'content-type': 'application/json' },
     body: { long_url },
     json: true
@@ -12,4 +14,10 @@ function succink(long_url) {
   return rp(options);
 }
 
-module.exports = succink;
+function registerService(id) {
+
+}
+
+module.exports = {
+  generateShortLink,
+};
