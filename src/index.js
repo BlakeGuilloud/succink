@@ -14,10 +14,6 @@ function generateShortLink(long_url) {
   return rp(options);
 }
 
-function registerService(id) {
-
-}
-
 module.exports = {
   generateShortLink,
 };
